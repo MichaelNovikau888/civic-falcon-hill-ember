@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import "@fontsource/literata/500.css";
+@import "@fontsource/literata/600.css";
+@import "@fontsource/literata/600-italic.css";
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+
+@theme {
+  --font-display: "Literata", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-sans: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  --color-paper: #f3efe6;
+  --color-sheet: #fbf8f2;
+  --color-ink: #1b1915;
+  --color-muted: #6f675c;
+  --color-line: #e3dcd0;
+  --color-pine: #1f6b4a;
+  --color-danger: #8f3b32;
+  --radius-sheet: 1.5rem;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
